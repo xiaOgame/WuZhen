@@ -1,0 +1,19 @@
+#only one chian surrouded by solvent
+#density = 5%
+
+tolerance 1.25
+filetype pdb
+output system_oneChain.pdb
+
+structure oneChain.pdb
+    number 1
+    resnumber 3
+    inside box 0.0 0.0 0.0 100.0 100.0 100.0
+end structure
+
+structure polarSolvent.pdb
+    number 200000
+    resnumber 3
+    inside box 0.0 0.0 0.0 100.0 100.0 100.0
+end structure
+

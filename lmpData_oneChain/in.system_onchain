@@ -1,0 +1,35 @@
+# system, 30 chains surrounded by 10x number solvent
+
+units lj
+atom_style molecular
+boundary p p p
+
+read_data system_oneChain.dat
+velocity all create 1.0 4928459 rot yes dist gaussian
+
+group Chain type 1 2
+pair_style lj/cut 3.5
+pair_coeff 1 1 1.0 1.0 3.5
+pair_coeff 1 2 1.0 1.0 1.1225
+pair_coeff 1 3 1.0 1.0 2.5
+pair_coeff 2 2 1.0 1.0 1.1225
+pair_coeff 2 3 1.0 1.0 1.1225
+pair_coeff 3 3 1.0 1.0 2.5
+
+special_bonds fene
+bond_style fene
+bond_coeff * 30.0 1.5 1.0 1.0
+
+neighbor 0.5 bin
+neigh_modify delay 0 every 10 check no
+
+fix 1 all nve
+
+thermo 10000
+thermo_style multi
+
+dump myDump  Chain atom 10000 opt_system_oneChain.lammpstrj
+
+timestep 0.001
+run 2000000
+
