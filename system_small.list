@@ -1,0 +1,15 @@
+#ATOM/BOND/ANGLE lists used for generating force field;
+
+pair_style      cg/cmm 15.0
+bond_style      harmonic
+angle_style     harmonic
+special_bonds  lj       0.0 0.0 1.0
+
+mass    1       #  PDM
+mass    2       #  CPA
+mass    3       #   OH
+
+bond_coeff    1     #  PDM  PDM
+bond_coeff    2     #  PDM  CPA
+bond_coeff    3     #  CPA  CPA
+

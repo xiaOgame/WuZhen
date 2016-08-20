@@ -1,0 +1,11 @@
+RESIDNAME LPD
+NUMATOM 3
+NUMBOND 2
+NUMANGLE 1
+NUMIMPR 0
+ATOM    1  1   LPD            0.000   0.000   3.400
+ATOM    2  2   LPD            0.000   0.000   2.200
+ATOM    3  2   LPD            0.000   0.000   1.000
+BOND 1 1 1 2 1 2
+BOND 2 1 2 3 2 2
+ANGLE 1 1 1 2 3 1 2 2

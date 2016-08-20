@@ -1,0 +1,13 @@
+# system of 10 chains surrounded by solvent
+# density = 10 %
+
+tolerance 1.25
+filetype pdb
+output system_solvent.pdb
+
+structure polarSolvent.pdb
+    number 41700
+    resnumber 3
+    inside box 0.0 0.0 0.0 60.0 60.0 180.0
+end structure
+
