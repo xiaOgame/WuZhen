@@ -5,7 +5,7 @@ atom_style molecular
 boundary p p p
 
 read_data system.dat
-velocity all create 1.0 4928459 rot yes dist gaussian
+velocity all create 1.0 4928459 rot yes mom yes dist gaussian
 
 group Chain type 1 2
 pair_style lj/cut 3.5
